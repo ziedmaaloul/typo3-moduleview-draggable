@@ -15,5 +15,10 @@
       "Soft2do\\Draggable\\": "Classes"
     }
   },
+  "extra": {
+        "typo3/cms": {
+            "extension-key": "moduleview-draggable"
+        }
+  },
   "version": "1.0.0"
 }
