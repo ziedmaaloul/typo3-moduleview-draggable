@@ -1,0 +1,19 @@
+
+{
+  "name": "soft2do/moduleview-draggable",
+  "type": "typo3-cms-extension",
+  "description": "Make Module List Of Typo3 Draggable",
+  "homepage": "https://github.com/ziedmaaloul/typo3-moduleview-draggable",
+  "license": ["GPL-2.0+"],
+  "state": "stable",
+  "keywords": [
+    "TYPO3 CMS",
+    "List Module Draggable"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Soft2do\\Draggable\\": "Classes"
+    }
+  },
+  "version": "1.0.0"
+}
