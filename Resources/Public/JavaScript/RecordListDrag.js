@@ -1,5 +1,6 @@
 require(['jquery', '/typo3conf/ext/moduleview_draggable/Resources/Public/JavaScript/JqueryUi.js'], function ()
 {
+
     function onCreate(e, ui) {
         $(this).find('span.draggable').css('cursor', 'move');
     }
@@ -35,7 +36,7 @@ require(['jquery', '/typo3conf/ext/moduleview_draggable/Resources/Public/JavaScr
 
     function enableDragging()
     {
-        var $tables = $('form[name="dblistForm"] table');
+        var $tables = $('form[name*="list-table-form"] table');
 
         $tables.each(function ()
         {
