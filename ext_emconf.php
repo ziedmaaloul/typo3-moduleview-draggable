@@ -3,7 +3,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'title' => 'Module List View Draggable',
 	'description' => 'Make Module List Of Typo3 Draggable',
 	'category' => 'be',
-	'version' => '10.10.10',
+	'version' => '11.11.11',
 	'state' => 'stable',
 	'uploadfolder' => false,
 	'createDirs' => '',
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array (
 	array (
 		'depends' =>
 		array (
-			'typo3' => '10.4',
+			'typo3' => '11.5',
 		),
 		'conflicts' =>
 		array (
