@@ -44,6 +44,8 @@ class ModuleRecordListHook implements RecordListHookInterface, SingletonInterfac
 	 * Add Control
 	 */
 	public function makeControl($table, $row, $cells, &$parentObject) {
+
+		
 		if(isset($GLOBALS['TCA'][$table]['ctrl']['draggable']) && $GLOBALS['TCA'][$table]['ctrl']['draggable']) {
 			$url = $this->uriBuilder->buildUriFromRoute('tce_db', []);
 			$url_components = parse_url($url);
@@ -53,18 +55,19 @@ class ModuleRecordListHook implements RecordListHookInterface, SingletonInterfac
 							<span class="icon-markup">
 							<svg class="icon-color" role="img"><use xlink:href="/typo3/sysext/core/Resources/Public/Icons/T3Icons/sprites/actions.svg#actions-drag"></use></svg>
 							</span></span></span>';
-			$cells['draggable'] = $span;
-
+			// $cells['draggable'] = $span;
+			$cells['primary']['draggable'] = $span;
 			// Enable Or Disable Single Move Up and Move Down Arrow
-			if(isset($cells['secondary']['moveUp']) && isset($GLOBALS['TCA'][$table]['ctrl']['disableArrows']) && $GLOBALS['TCA'][$table]['ctrl']['disableArrows']){
-				unset($cells['secondary']['moveUp']);
+			if(isset($cells['primary']['moveUp']) && isset($GLOBALS['TCA'][$table]['ctrl']['disableArrows']) && $GLOBALS['TCA'][$table]['ctrl']['disableArrows']){
+				unset($cells['primary']['moveUp']);
+				unset($cells['moveUp']);
 			}
 
-			if(isset($cells['secondary']['moveDown']) && isset($GLOBALS['TCA'][$table]['ctrl']['disableArrows']) && $GLOBALS['TCA'][$table]['ctrl']['disableArrows']){
-				unset($cells['secondary']['moveDown']);
+			if(isset($cells['primary']['moveDown']) && isset($GLOBALS['TCA'][$table]['ctrl']['disableArrows']) && $GLOBALS['TCA'][$table]['ctrl']['disableArrows']){
+				unset($cells['primary']['moveDown']);
+				unset($cells['moveDown']);
 			}
 			// Enable Or Disable Single Move Up and Move Down Arrow
-
 		}
 
 		return $cells;
