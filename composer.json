@@ -17,7 +17,7 @@
   },
   "extra": {
         "typo3/cms": {
-            "extension-key": "moduleview-draggable"
+            "extension-key": "moduleview_draggable"
         }
   },
   "version": "1.0.0"
