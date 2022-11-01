@@ -4,7 +4,7 @@
 1 - Install Extension
 
 ```javascript
-composer require soft2do/moduleview-draggable
+composer require soft2do/moduleview-draggable:^2.0
 ```
 
 2 - Add "sorting" column to databse
